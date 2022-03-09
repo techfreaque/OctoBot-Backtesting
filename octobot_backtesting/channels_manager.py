@@ -26,7 +26,7 @@ import octobot_commons.asyncio_tools as asyncio_tools
 
 
 class ChannelsManager:
-    DEFAULT_REFRESH_TIMEOUT = 15
+    DEFAULT_REFRESH_TIMEOUT = 50000 # fixes candle timeout issue when optimizer running
 
     def __init__(self, exchange_ids, matrix_id, time_chan_name, refresh_timeout=DEFAULT_REFRESH_TIMEOUT):
         self.logger = logging.get_logger(self.__class__.__name__)
